@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>	USER </title>
+
+<link rel = "stylesheet" href ="CSS/admin-style.css">
+<script src="JS/getInfoUser.js"></script>
+<meta name = "viewport", content = "width=device-width, initial-scale=1">
+<link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+</head>
+
+	<div class="main-content">
+	<div class="navigation">
+		<div class="logo">
+			<a href = "HOME ADMIN.html" > <img src="D:\XAMPP\htdocs\CUSTOMER\IMAGE\heeer.png" center center alt="Your Logo"
+				style = "max-width:100%; height: auto;"> </a>
+			
+		</div>
+		<div class="menubar">
+			<ul>
+				<li><a href="DASHBOARD.html" style="color: #000000" class="material-icons">&#xe871; DASHBOARD </a> </li>
+				<li><a href="APPOINTMENT.html" class="material-icons">&#xe878; APPOINTMENT </a> </li>
+				<li><a href="ANNOUNCEMENTS.html" class="material-icons">&#128226; ANNOUNCEMENT </a> </li>
+				<li><a href="SERVICES.html" class= "material-icons"> &#x1F4BC; SERVICES </a> </li>
+				<li><a href="CUSTOMER.html" class= "material-icons"> &#x1F465; CUSTOMER </a> </li>
+				<li><a href="USER-DIRECT.html" class= "material-icons"> &#x1F935; USER </a> </li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="table">
+		<table id = "myTab">
+				<h2 style = " top: 100px; text-align: center;" > USER LIST </h2> <br>
+				<button class="add" onclick= "openForm()" >&#43; Add</button> 
+				
+<br><br>
+				<tr>
+					<td style = "background-color:#ADC4CE; text-align: center;"> User ID </td>
+					<td style = "background-color:#ADC4CE; text-align: center;"> First Name </td>
+					<td style = "background-color:#ADC4CE; text-align: center;"> Last Name </td>
+					<td style = "background-color:#ADC4CE; text-align: center;"> Address </td>
+					<td style = "background-color:#ADC4CE; text-align: center;"> Email </td>
+					<td style = "background-color:#ADC4CE; text-align: center;"> Username </td>
+					<td style = "background-color:#ADC4CE; text-align: center;"> Password </td>
+					<td style = "background-color:#ADC4CE; text-align: center;"> Action </td>
+				</tr>
+
+<tbody></tbody>
+				
+				</table>
+	</div>
+	</div>
+
+<body>
+    
+    <div id="userForm" class="modal">
+
+		<form id = "myUser" autocomplete="off" onsubmit="event.preventDefault(); onFormSubmit()" 
+	    class="modal-content animate">
+
+		<span class="modal-close" onclick="closeForm()">&times;</span>
+		<h3 style="text-align: center; padding-top: 20px;">User List</h3>
+
+		<div class="container">
+		<label for= "UserID"><b>UserID: </b></label>
+		<input type= "number" placeholder= "Enter Your User ID" id = "userID" required> <br>
+  
+		<label for= "FName"><b> First Name: </b></label>
+		<input type= "text" placeholder= "Enter Your First Name" id = "FName" required> <br>
+
+		<label for= "LName"><b> Last Name: </b></label>
+		<input type= "text" placeholder= "Enter Your Last Name" id = "LName" required> <br>
+		
+		<label for="Address"><b>Address: </b></label>
+		<input type="text" placeholder= "Enter Your Address" id = "Address" required> <br>
+  
+		<label for="Email"><b>Email Address: </b></label>
+		<input type="email" placeholder= "Enter Your Email Address" id = "Email" required> <br>
+		
+        <label for="Username"><b>Username: </b></label>
+		<input type="text" placeholder= "Enter Your Username" id= "Username" required> <br>
+
+		<label for="Password"><b>Password: </b></label>
+		<input type="password" placeholder= "Enter Your Password" id= "Password" required> <br>
+
+		
+		<button type= "reset" onclick="resetForm()" name="Reset" class="resetbtn" style="border-radius:10px;"> RESET </button>
+	  	  
+			</div>
+			<div class="container">
+			<button type="submit" onclick= "submitForm(), resetForm()" class="addbtn" style="border-radius:10px;">Add</button>
+			<button type="button" onclick="closeForm()" class="cancelbtn" style="border-radius:10px;">Cancel</button>
+		</form>
+	 </div>
+
+	
+       
+</body>
+</html>
