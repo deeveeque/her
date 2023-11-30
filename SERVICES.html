@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> SERVICES </title>
+<meta name = "viewport" content = "width=device-width, initial-scale=1">
+<link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+
+	</head>
+
+	<style>
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Century Gothic';
+    background-attachment: fixed; 
+    background-size: 100%;
+    }
+
+    .menubar ul{
+    list-style-type: none;
+    margin-left: -10px;
+    }
+
+    .menubar a {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    color: black;
+    margin-left:10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 80%;
+    overflow: hidden;
+    }
+    
+    .menubar a:hover {
+    background-color: #2284DD;
+    width: 100%;
+    }
+        
+    .main-content {
+    width: 90%;
+    float: left;
+    display: flex;
+    }
+    
+    .logo {
+    padding: 20px;
+    color: white;
+    font-weight: 700;
+    }
+
+    .navigation {
+    float: left;
+    width: 20%;
+    display: block;
+    text-align: left;
+    font-family: 'Arial';
+    overflow: hidden;
+    background-color: #DBE2EF;
+    min-height:800px;
+    }
+
+    .table {
+    width: 80%;	
+    padding-top: 90px;
+    }
+
+    table.center {
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    table { 
+        position: absolute;
+        width: 75%;
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        border-collapse: collapse;
+        text-align: center;
+        margin-left: 48px;
+    }
+    
+    td, tr, th {
+    height: 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    }
+
+    .container {
+    padding: 12px;
+    border-radius: 15px;
+    }
+
+  /* login */
+    .login {
+        max-width: 30%;
+        margin: 7% auto;
+        background-color: #5d5c61ce;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }	
+
+    .login a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        margin-bottom: 2px;
+    }
+    
+    .login label {
+      text-decoration: none;
+      color: white;
+      margin: 11px;
+  }
+
+    .login button {
+        background-color: #1e2e3a;
+        color: white;
+        padding: 10px 18px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .admin button {
+      background-color: #1e2e3a;
+      color: white;
+      padding: 10px 18px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+  }
+
+    button.add {
+        width: 100px;
+        margin-left: 50px;
+    }
+
+    button.add:focus,
+    button.add:hover {
+      color: red;
+      cursor: pointer;
+      }
+
+  /*popup modal*/
+  
+    .modal {
+        display: none;
+        position: fixed; 
+        padding: 3px;
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        box-sizing: border-box;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4); 
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; 
+        border: 1px solid #888;
+        padding: 7px;
+        width: 30%; 
+        border-radius: 15px;
+      }
+
+      .modal label {
+        margin: 11px;
+      }
+    
+    .modal-close {
+      float:right; 
+      color:red; 
+      font-size: 30px; 
+      margin-top: 8px; 
+      margin-right: 15px;
+        }
+        
+    .modal-close:hover,
+    .modal-close:focus {
+    color: red;
+    cursor: pointer;
+    }
+    
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+      }
+      
+      @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+      }
+        
+      @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+      }
+      @media screen and (max-width: 300px) {
+        .cancelbtn {
+           width: 100%;
+        }
+    }
+
+        @media screen and (max-width: 300px) {
+            .addbtn {
+               width: 100%;
+            }
+      }
+
+      .resetbtn {
+        margin: 10px auto;
+        width: auto;
+        padding: 10px 18px;
+        background-color: rgb(241, 206, 172);
+        cursor: pointer;
+      }
+
+      .addbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: rgb(233, 255, 220);
+        cursor: pointer;
+      }
+
+      .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+        cursor: pointer;
+      }
+
+      input[type=text], [type=email], [type=password], [type=number], [type=time], [type=date] {
+        width: 97%;
+        padding: 15px;
+        margin: 8px;
+        display: inline-block;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+	</style>
+	
+	
+		<div class= "main-content">
+		<div class= "navigation">
+			<div class= "logo">
+				<a href = "HOME ADMIN.html" > <img src="D:\XAMPP\htdocs\CUSTOMER\IMAGE\heeer.png" center center alt="Your Logo"
+					style = "max-width:100%; height: auto;"> </a>
+			</div>
+			
+			<div class= "menubar">
+				<ul>
+					<li><a href="DASHBOARD.html" style="color: #000000" class="material-icons">&#xe871; DASHBOARD </a> </li>
+					<li><a href="APPOINTMENT.html" class="material-icons">&#xe878; APPOINTMENT </a> </li>
+					<li><a href="ANNOUNCEMENTS.html" class="material-icons">&#128226; ANNOUNCEMENT </a> </li>
+					<li><a href="SERVICES.html" class= "material-icons"> &#x1F4BC; SERVICES </a> </li>
+					<li><a href="CUSTOMER.html" class= "material-icons"> &#x1F465; CUSTOMER </a> </li>
+					<li><a href="USER-DIRECT.html" class= "material-icons"> &#x1F935; USER </a> </li>
+				</ul>
+			</div>
+		</div>
+		
+		
+				<div class="table">
+				<table id = "myTab">
+					<h2 style = " top: 100px; text-align: center;" > SERVICES </h2> <br>
+					<button class="add" onclick= "openForm()" >&#43; Add</button> 
+					
+					<br><br>
+
+	<tr>
+	<td style = "background-color:#ADC4CE; text-align: center; font-size: +2;"> Service ID </td>
+	<td style = "background-color:#ADC4CE; text-align: center; font-size: +2;"> Service Name </td>
+	<td style = "background-color:#ADC4CE; text-align: center; font-size: +2;"> Description </td>
+	<td style = "background-color:#ADC4CE; text-align: center; font-size: +2;"> Price </td>
+	<td style = "background-color:#ADC4CE; text-align: center; font-size: +2;"> Action </td>
+	</tr>
+
+			<tbody></tbody>
+		</table>
+	</div>
+</div>
+
+		<body>
+    
+			<div id="mySForm" class="modal">
+		
+				<form id = "myService" autocomplete="off" onsubmit="event.preventDefault(); onFormSubmit()" 
+				class="modal-content animate">
+		
+				<span class="modal-close" onclick="closeForm()">&times;</span>
+				<h3 style="text-align: center; padding-top: 20px;"> SERVICES </h3>
+		  
+			  	<div class="container">
+				<label for= "serviceID"><b>Announcement: </b></label>
+				<input type= "text" placeholder= "Enter the service ID.." id= "serviceID" required> <br>
+		  
+				<label for= "serviceName"><b> Service Name: </b></label>
+				<input type= "text" placeholder= "Enter the service name.." id= "serviceName" required> <br>
+		  
+				<label for="seerviceDesc"><b>Description: </b></label>
+				<input type="text" placeholder= "Enter the description.." id= "serviceDesc" required> <br>
+				
+				<label for="servicePrice"><b>Price: </b></label>
+				<input type="text" placeholder= "Enter the price.." id= "servicePrice" required> <br>
+				
+				
+				<button type= "reset" onclick="resetForm()" name="Reset" class="resetbtn" style="border-radius:10px;"> RESET </button>
+	  
+				</div>
+				<div class="container">
+				  <button type="submit" onclick= "submitForm(), resetForm()" class="addbtn" style="border-radius:10px;">Add</button>
+				  <button type="button" onclick="closeForm()" class="cancelbtn" style="border-radius:10px;">Cancel</button>
+			  </form>
+			  </div>
+		  
+<script>
+        var selectedRow = null;
+	
+			function openForm() {
+				document.getElementById("mySForm").style.display = "block";
+			}
+	
+			function closeForm() {
+				document.getElementById("mySForm").style.display = "none";
+			}
+
+			function resetForm() {
+            document.getElementById('serviceID').value = '';
+            document.getElementById('serviceName').value = '';
+            document.getElementById('serviceDesc').value = '';
+            document.getElementById('servicePrice').value = '';
+            selectedRow = null;
+        }
+
+		function submitForm() {
+            var serviceID = document.getElementById("serviceID").value;
+			var serviceName = document.getElementById("serviceName").value;
+			var serviceDesc = document.getElementById("serviceDesc").value;
+			var servicePrice = document.getElementById("servicePrice").value;
+
+			if (!serviceID || !serviceName || !serviceDesc || !servicePrice) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            if (selectedRow) {
+                updateTableRow(selectedRow, serviceID, serviceName, serviceDesc, servicePrice);
+			} else {
+                addNewRow(serviceID, serviceName, serviceDesc, servicePrice);
+			}
+			
+			resetForm();
+            closeForm();
+		}
+
+		function addNewRow(serviceID, serviceName, serviceDesc, servicePrice) {
+            var table = document.getElementById("myTab");
+            var newRow = table.insertRow(table.rows.length);
+            var cells = [serviceID, serviceName, serviceDesc, servicePrice];
+
+            for (var i = 0; i < cells.length; i++) {
+                var cell = newRow.insertCell(i);
+                cell.innerHTML = cells[i];
+            }
+
+            var actionCell = newRow.insertCell(cells.length);
+            actionCell.innerHTML = '<button onclick="onEdit(this)">Edit</button> <button onclick="onDelete(this)">Delete</button>';
+        }
+		
+		function updateTableRow(row, serviceID, serviceName, serviceDesc, servicePrice) {
+            var cells = [serviceID, serviceName, serviceDesc, servicePrice];
+
+            for (var i = 0; i < cells.length; i++) {
+                row.cells[i].innerHTML = cells[i];
+            }
+        }
+
+        function onEdit(td) {
+            selectedRow = td.parentElement.parentElement;
+            document.getElementById('serviceID').value = selectedRow.cells[0].innerHTML;
+            document.getElementById('serviceName').value = selectedRow.cells[1].innerHTML;
+            document.getElementById('serviceDesc').value = selectedRow.cells[2].innerHTML;
+            document.getElementById('servicePrice').value = selectedRow.cells[3].innerHTML;
+            openForm();
+        }
+
+        function onDelete(td) {
+            if (confirm('Do you want to delete this record?')) {
+                row = td.parentElement.parentElement;
+                document.getElementById('myTab').deleteRow(row.rowIndex);
+                resetForm();
+            }
+        }
+
+	
+      </script>
+</body>
+</html>
